@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <tuple>
 using namespace std;
 
 //forward declarations
@@ -50,7 +51,7 @@ int main() {
     for (int j = 0; j < columns; j++) {
       if(multiDimensionalArray[i][j] != 0){
         //cout << "The position of element " << multiDimensionalArray[i][j] << " from the multidimensional array is " << linearArray[0] + linearIndx(i, j, columns) << " in the linear array." << endl;
-        linearArray[linearArray[0] + linearIndx(i, j, columns)] = multiDimensionalArray[i][j];
+        linearArray[linearArray[0] + linearIndx(i, j, columns)] = make_tuple(i, j);
       }
     }
   }
@@ -74,12 +75,12 @@ int linearIndx(int rowIndex, int columnIndex, int numberOfColumns) {
 }
 
 //function to calculate the corresponding multidimensional position from the linear array
-int inverseIndx(int index, int number_of_columns) {
+/*int inverseIndx(int index, int number_of_columns) {
   int number of
   for (int i = index; i > 0; i--) {
     if
   }
-}
+}*/
 
 //Function to generate a random number
 int generateRandomNumber() {
