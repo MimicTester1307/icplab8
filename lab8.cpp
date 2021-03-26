@@ -51,9 +51,17 @@ int main() {
     for (int j = 0; j < columns; j++) {
       if(multiDimensionalArray[i][j] != 0){
         //cout << "The position of element " << multiDimensionalArray[i][j] << " from the multidimensional array is " << linearArray[0] + linearIndx(i, j, columns) << " in the linear array." << endl;
-        linearArray[linearArray[0] + linearIndx(i, j, columns)] = make_tuple(i, j);
+        linearArray[linearArray[0] + linearIndx(i, j, columns)] = multiDimensionalArray[i][j];
       }
     }
+  }
+
+  // displaying the contents of the linear array
+  for (int i = 0; i < sizeof(linearArray); i++) {
+    if (linearArray[i] != 0) {
+        cout << linearArray[i] << endl;
+    }
+
   }
 
   /*Section for generating 3 lower triangular arrays */
@@ -89,7 +97,7 @@ int generateRandomNumber() {
 }
 
 //Function to generate and display 8x8 matrix
-//void generateAndPrintFirstMatrix() {
+/*void generateAndPrintFirstMatrix() {
   int multiDimensionalArray[8][8] = {};
   //generating the array
   for (int i = 0; i < 8; i++) {
@@ -110,10 +118,10 @@ int generateRandomNumber() {
     }
     cout << endl;
   }
-}
+}*/
 
 //Function to generate and display 32x32 matrix
-//void generateAndPrintSecondMatrix() {
+/*void generateAndPrintSecondMatrix() {
   int multiDimensionalArray[32][32] = {};
   //generating the array
   for (int i = 0; i < 32; i++) {
@@ -134,10 +142,10 @@ int generateRandomNumber() {
     }
     cout << endl;
   }
-}
+}*/
 
 //Function to generate and display 128x128 function
-//void generateAndPrintThirdMatrix() {
+/*void generateAndPrintThirdMatrix() {
   int multiDimensionalArray[128][128] = {};
   //generating the array
   for (int i = 0; i < 128; i++) {
@@ -158,4 +166,4 @@ int generateRandomNumber() {
     }
     cout << endl;
   }
-}
+}*/
